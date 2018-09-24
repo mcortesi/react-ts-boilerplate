@@ -5,7 +5,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "precommit": "lint-staged",
     "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch",
@@ -48,5 +47,10 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "tslib": "^1.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
