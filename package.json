@@ -8,11 +8,16 @@
     "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "lint": "tslint --project . --format stylish"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+    "src/**/*.{js,jsx,json,css}": [
       "prettier -l"
+    ],
+    "src/**/*.{ts,tsx}": [
+      "prettier -l",
+      "tslint"
     ]
   },
   "devDependencies": {
@@ -34,6 +39,9 @@
     "style-loader": "^0.23.0",
     "ts-jest": "^23.10.1",
     "ts-loader": "^5.2.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.0.3",
     "url-loader": "^1.1.1",
     "webpack": "^4.19.1",

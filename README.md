@@ -8,6 +8,7 @@ Boilerplate project with:
 - jest
 - prettier
 - precommit hook for linting
+- tslint
 
 ## Commands
 
