@@ -1,6 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import { createAppStore } from './ducks/root';
 import './styles.css';
-import { Hello } from './components/Hello';
 
-ReactDOM.render(<Hello compiler="TypeScript" framework="React" />, document.getElementById('app'));
+const store = createAppStore();
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
